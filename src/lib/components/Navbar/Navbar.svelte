@@ -1,16 +1,14 @@
 <script lang="ts">
 	import routes from '$lib/NavRoutes'
 	import Navlink from './Navlink.svelte'
-	import Logo from '$lib/assets/logo.svg'
+	import Logo from '$lib/assets/Logo.svelte'
 
 	export let currentRoute: string
 </script>
 
 <div class="navbar">
 	<div class="logo">
-		<a href="/">
-			<img src={Logo} alt="logo" class="logo" />
-		</a>
+		<Logo />
 	</div>
 	<div class="buttons">
 		{#each routes as { href, label }}
