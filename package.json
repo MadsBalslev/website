@@ -33,5 +33,6 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/source-code-pro": "^5.0.17"
-	}
+	},
+	"packageManager": "yarn@4.1.0"
 }
