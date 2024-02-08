@@ -10,16 +10,16 @@ body {
 }
 
 body {
-  background-color: var(--background);
-  background-size: 200% 200%;
-  color: white;
-  margin: 0;
-  box-sizing: border-box;
-  display: grid;
-  line-height: 1.75;
-  place-items: center;
-  height: 100%;
-  overflow-x: hidden;
+	background-color: var(--background);
+	background-size: 200% 200%;
+	color: white;
+	margin: 0;
+	box-sizing: border-box;
+	display: grid;
+	line-height: 1.75;
+	place-items: center;
+	height: 100%;
+	overflow-x: hidden;
 }
 
 #svelte {
@@ -29,7 +29,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 h1,
@@ -43,10 +43,10 @@ p {
 }
 
 footer {
-  font-size: 16px;
-  font-weight: 400;
-  padding: 30px 0;
-  max-width: 900px;
-  text-align: center;
-  width: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 30px 0;
+	max-width: 900px;
+	text-align: center;
+	width: 100%;
 }
