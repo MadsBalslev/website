@@ -9,7 +9,7 @@
   <ProjectCard {project} />
 {/each}
 
-<p class="message">You can also check out all of my unfinished projects on my <a href="www.github.com/madsbalslev" target="_blank">GitHub</a></p>
+<p class="message">You can also check out all of my unfinished projects on my <a href="https://www.github.com/madsbalslev" target="_blank">GitHub</a></p>
 
 <style>
   .message {
