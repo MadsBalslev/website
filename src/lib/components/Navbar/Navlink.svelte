@@ -1,9 +1,14 @@
 <script>
 	export let to = '/'
 	export let active = false
+	export let opened = false
+
+	const handleClick = () => {
+		opened = false
+	}
 </script>
 
-<a href={to} class={active ? 'active' : ''}>
+<a href={to} on:click={handleClick} class={active ? 'active' : ''}>
 	<slot />
 </a>
 
@@ -31,5 +36,15 @@
 		width: 100%;
 		height: 3px;
 		background-color: #eb5e28;
+	}
+
+	@media (max-width: 768px) {
+		a {
+			width: fit-content;
+			display: block;
+			font-size: large;
+			padding: .5rem;
+			text-align: center;
+		}
 	}
 </style>

@@ -576,6 +576,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tabler/icons-svelte@npm:^2.47.0":
+  version: 2.47.0
+  resolution: "@tabler/icons-svelte@npm:2.47.0"
+  dependencies:
+    "@tabler/icons": "npm:2.47.0"
+  peerDependencies:
+    svelte: ">=3 <5"
+  checksum: 10c0/f66ef95f8fbeadc1ec593a6c699f08075c58c55d0f68f36da76e9ef29f2dcc339796df21aa237e431371f3b62c231b8af02e43e42b1216079dd2ae6957b6b503
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:2.47.0":
+  version: 2.47.0
+  resolution: "@tabler/icons@npm:2.47.0"
+  checksum: 10c0/ffdffa1289ca958f7d7c06c19e35c51a664d916df510fb44fb673abc2031747f2b3c47e21ba4c1ca07a6872b793f2063179bbbfb6afd1c68b522ca333460a7f3
+  languageName: node
+  linkType: hard
+
 "@types/cookie@npm:^0.6.0":
   version: 0.6.0
   resolution: "@types/cookie@npm:0.6.0"
@@ -3430,6 +3448,7 @@ __metadata:
     "@sveltejs/adapter-vercel": "npm:^5.1.0"
     "@sveltejs/kit": "npm:^2.0.0"
     "@sveltejs/vite-plugin-svelte": "npm:^3.0.0"
+    "@tabler/icons-svelte": "npm:^2.47.0"
     "@types/eslint": "npm:8.56.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.0.0"
     "@typescript-eslint/parser": "npm:^6.0.0"
