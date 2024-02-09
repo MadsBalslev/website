@@ -32,7 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource-variable/source-code-pro": "^5.0.17"
+		"@fontsource-variable/source-code-pro": "^5.0.17",
+		"@tabler/icons-svelte": "^2.47.0"
 	},
 	"packageManager": "yarn@4.1.0"
 }
