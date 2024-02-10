@@ -1,12 +1,12 @@
 <script>
   import projects from "$lib/Projects";
-  import { ProjectCard } from "$lib/components";
+  import { Card } from "$lib/components";
 </script>
 
 <h1>Projects</h1>
 
 {#each projects as project}
-  <ProjectCard {project} />
+  <Card {...project} />
 {/each}
 
 <p class="message">You can also check out all of my unfinished projects on my <a href="https://www.github.com/madsbalslev" target="_blank">GitHub</a></p>

@@ -42,6 +42,11 @@ p {
 	color: #fffcf2;
 }
 
+a {
+	color: #eb5e28;
+	text-decoration: underline;
+}
+
 footer {
 	font-size: 16px;
 	font-weight: 400;
