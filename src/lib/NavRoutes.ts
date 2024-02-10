@@ -8,8 +8,8 @@ const routes = [
 		label: 'Projects'
 	},
 	{
-		href: '/about',
-		label: 'About'
+		href: '/resume',
+		label: 'Resume'
 	}
 ]
 

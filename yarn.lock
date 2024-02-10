@@ -1185,6 +1185,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.11.10":
+  version: 1.11.10
+  resolution: "dayjs@npm:1.11.10"
+  checksum: 10c0/4de9af50639d47df87f2e15fa36bb07e0f9ed1e9c52c6caa1482788ee9a384d668f1dbd00c54f82aaab163db07d61d2899384b8254da3a9184fc6deca080e2fe
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -3218,6 +3225,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"svelte-time@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "svelte-time@npm:0.8.2"
+  dependencies:
+    dayjs: "npm:^1.11.10"
+  checksum: 10c0/5eea5e9653449c74770aa430a5177e68d970b9ac881b374e9d68d3f83dd1524dda5e8deee941e9cb94fd84a6767e0cf44ee45a68da263c3232da9d83b0e2337b
+  languageName: node
+  linkType: hard
+
 "svelte@npm:^4.2.7":
   version: 4.2.10
   resolution: "svelte@npm:4.2.10"
@@ -3459,6 +3475,7 @@ __metadata:
     prettier-plugin-svelte: "npm:^3.1.2"
     svelte: "npm:^4.2.7"
     svelte-check: "npm:^3.6.0"
+    svelte-time: "npm:^0.8.2"
     tslib: "npm:^2.4.1"
     typescript: "npm:^5.0.0"
     vite: "npm:^5.0.3"
