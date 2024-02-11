@@ -18,7 +18,7 @@ const projects: Project[] = [
   },
   {
     title: 'Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data for Saphe',
-    subtitle: 'Bachelor Thesis Project',
+    subtitle: 'Bachelor Thesis',
     description: 'In collaboration with the company Saphe, we have developed a time-series forecasting model to predict the mean speed of traffic based on historical traffic data. The model is used to predict the mean speed of traffic for the next 15 minutes, and the predictions are used to provide real-time traffic information to the users of the Saphe app.',
     url: '/projects',
     logo: 'https://placehold.co/250',

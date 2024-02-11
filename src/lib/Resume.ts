@@ -5,6 +5,7 @@ type ResumeItem = {
   keywords?: string[]
   description?: string
   location?: string
+  gpa?: number
 }
 
 type Resume = {
@@ -23,6 +24,7 @@ const resume: Resume = {
       startDate: new Date('2020-09-01'),
       endDate: new Date('2023-06-30'),
       title: 'BSc in Software Engineering',
+      gpa: 3.4,
       location: 'Aalborg University',
       keywords: ['Machine Intelligence', 'SCRUM', 'Project Management', 'Compilers', 'Semantics', 'Frontend Architecture', 'Backend Architecture'],
       description: 'In my bachelors degree I gained fundamental knowledge in most parts of computer science. This all culminated in my bachelor thesis, "Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data". This was a collaboration with the company Saphe, to build a ML-model for them to predict the traffic on a given stretch of highway within the near future, based on previous traffic data, which in the end would let them alert users of their app of any congestion on their route before it would happen.'
