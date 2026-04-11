@@ -1,11 +1,11 @@
-<script>
-	export let opened = false;
+<script lang="ts">
+	let { opened = $bindable(false) }: { opened: boolean } = $props()
 </script>
 
 <button
-	aria-label="menu-burger-button"
+	aria-label="Toggle navigation menu"
 	class:opened
-	on:click={() => (opened = !opened)}
+	onclick={() => (opened = !opened)}
 >
 	<svg width="32" height="24">
 		<line id="top" x1="0" y1="2" x2="32" y2="2" />
@@ -21,19 +21,21 @@
 	}
 
 	svg line {
-		stroke: currentColor;
+		stroke: var(--color-text);
 		stroke-width: 3;
 		transition: transform 0.3s ease-in-out;
 	}
 
 	button {
-		color: white;
+		color: var(--color-text);
 		background: transparent;
-		border: transparent;
+		border: none;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		z-index: 20;
+		cursor: pointer;
+		padding: var(--space-xs);
 	}
 
 	.opened svg {
