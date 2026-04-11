@@ -13,6 +13,10 @@ const routes = [
 		href: '/resume',
 		label: 'Resume'
 	},
+	{
+		href: '/uses',
+		label: 'Uses'
+	},
 	...(config.features.blog ? [{ href: '/blog', label: 'Blog' }] : [])
 ]
 
