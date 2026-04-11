@@ -5,6 +5,7 @@
 </script>
 
 <svelte:head>
+  <title>Mads Balslev — Software Engineer</title>
   <meta property="og:title" content="Mads Balslev — Software Engineer" />
   <meta property="og:description" content="Software Engineer and Consultant at Trifork. Building enterprise AI platforms and delivering customer solutions." />
 </svelte:head>
