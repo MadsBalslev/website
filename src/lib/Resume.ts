@@ -31,7 +31,7 @@ const resume: Resume = {
       gpa: 10.3,
       gpaScale: '12',
       keywords: ['Machine Intelligence', 'Distributed Systems', 'Computer Vision', 'Multi-Agent Systems', 'Entrepreneurship', 'Mobile HCI'],
-      description: 'Master\'s thesis: "Using UAVs to Detect and Calculate Biomass Stockpile Volumes at Power Plants" — developing drone-based computer vision systems for automated biomass volume estimation at power plants.'
+      description: 'Thesis: "Using UAVs to Detect and Calculate Biomass Stockpile Volumes at Power Plants" — a semi-autonomous system using drones and YOLOv11 for biomass inventory management, developed in collaboration with Danish power plants.'
     },
     {
       startDate: new Date('2020-09-01'),

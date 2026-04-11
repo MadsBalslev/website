@@ -10,8 +10,8 @@ const projects: Project[] = [
   {
     title: 'Drone-Based Biomass Volume Estimation',
     subtitle: 'MSc Thesis',
-    description: 'Developed a computer vision pipeline using UAVs to detect and calculate biomass stockpile volumes at power plants. The system uses drone imagery for 3D reconstruction and segmentation to automate volume estimation that was previously done manually.',
-    keywords: ['Python', 'Computer Vision', 'PyTorch', 'Point Clouds', 'UAVs']
+    description: 'Built a semi-autonomous pipeline for biomass stockpile volume estimation at power plants, in collaboration with HOFOR Amagerværket and Asnæsværket. A DJI Mavic 3M drone captures aerial imagery, WebODM generates orthophotos and 3D point clouds, and a fine-tuned YOLOv11 model segments the piles for volumetric calculation via Delaunay Triangulation. Also created the PSS (Pile Segmentation Set) dataset — 482 RGB + 482 NIR images. Designed to run on a Raspberry Pi 5 for offline, on-site deployment.',
+    keywords: ['Python', 'YOLOv11', 'Computer Vision', 'WebODM', 'Point Clouds', 'UAVs']
   },
   {
     title: 'CrowdSPEAK',
