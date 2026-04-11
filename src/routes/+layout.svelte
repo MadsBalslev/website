@@ -11,6 +11,8 @@
 	injectAnalytics({ mode: dev ? 'development' : 'production' })
 
 	let { children }: { children: Snippet } = $props()
+
+	const buildDate = __BUILD_DATE__
 </script>
 
 <Navbar currentRoute={page.url.pathname} />
@@ -23,11 +25,18 @@
 
 <footer>
 	<p>Built by <a href="/resume">Mads Balslev</a></p>
+	<p class="build-date">Last updated {buildDate}</p>
 </footer>
 
 <style>
 	main {
 		flex: 1;
 		padding: var(--space-xl) 0;
+	}
+
+	.build-date {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-muted);
+		margin-top: var(--space-xs);
 	}
 </style>
