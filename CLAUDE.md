@@ -18,18 +18,22 @@ Personal portfolio website for Mads Balslev, built with SvelteKit 2 + Svelte 5. 
 - **Icons**: @tabler/icons-svelte v3
 - **Font**: Source Code Pro Variable (monospace)
 - **Package manager**: Bun
+- **Analytics**: @vercel/analytics
 - **Deployment**: Vercel via @sveltejs/adapter-vercel
+- **Domain**: madsbalslev.com
 
 ## Project Structure
 ```
 src/
   routes/             # SvelteKit pages
     +layout.svelte    # Root layout (navbar, footer, page transitions)
-    +page.svelte      # Homepage (hero, highlights)
+    +page.svelte      # Homepage (hero, highlights, contact CTA)
     projects/         # Projects showcase
     resume/           # Professional resume
+    uses/             # Tools & setup page
     blog/             # Blog (feature-flagged)
       [slug]/         # Dynamic blog post route
+    sitemap.xml/      # Dynamic sitemap generation
   lib/
     components/       # Reusable components (Card, Navbar)
     assets/           # SVG logo
@@ -37,6 +41,7 @@ src/
     Resume.ts         # Resume data (education, experience, positions)
     Projects.ts       # Project data
     Socials.ts        # Social media links
+    Uses.ts           # Tools & setup data
     NavRoutes.ts      # Navigation routes (respects feature flags)
   content/
     blog/             # Markdown blog posts (frontmatter: title, date, description, published)
@@ -61,6 +66,13 @@ src/
 - Resume data lives in `src/lib/Resume.ts` — supports grouped positions (LinkedIn-style) via `positions` array
 - Projects data in `src/lib/Projects.ts`
 - Blog posts are markdown files in `src/content/blog/` with `published: true/false` frontmatter
+
+### SEO & Social
+- OG meta tags set in `src/app.html` (defaults) and per-page via `<svelte:head>`
+- Static OG image at `static/og.png` (1200x630)
+- SVG favicon at `static/favicon.svg` (derived from logo)
+- Dynamic sitemap at `/sitemap.xml` (auto-includes published blog posts)
+- `static/robots.txt` points crawlers to sitemap
 
 ### Feature Flags
 - Blog visibility controlled by `config.features.blog` in `src/lib/config.ts`
