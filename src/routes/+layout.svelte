@@ -1,10 +1,13 @@
 <script lang="ts">
 	import '../app.css'
 	import '@fontsource-variable/source-code-pro'
+	import { inject } from '@vercel/analytics'
 	import { page } from '$app/state'
 	import { fade } from 'svelte/transition'
 	import { Navbar } from '$lib/components'
 	import type { Snippet } from 'svelte'
+
+	inject()
 
 	let { children }: { children: Snippet } = $props()
 </script>
