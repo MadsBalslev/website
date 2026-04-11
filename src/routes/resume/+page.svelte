@@ -63,7 +63,7 @@
       {#snippet footer()}
         {#if education.gpa}
           <div class="gpa">
-            <span class="gpa-badge">GPA: {education.gpa} / 4.0</span>
+            <span class="gpa-badge">Average: {education.gpa} / {education.gpaScale ?? '12'}</span>
           </div>
         {/if}
       {/snippet}

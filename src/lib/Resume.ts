@@ -13,6 +13,7 @@ type ResumeItem = {
   description?: string
   location?: string
   gpa?: number
+  gpaScale?: string
 }
 
 type Resume = {
@@ -24,18 +25,23 @@ const resume: Resume = {
   education: [
     {
       startDate: new Date('2023-09-01'),
-      endDate: new Date('2025-06-30'),
-      title: 'MSc in Software Engineering',
-      location: 'Aalborg University'
+      endDate: new Date('2025-06-19'),
+      title: 'MSc in Engineering (Software) — Cand.Polyt.',
+      location: 'Aalborg University',
+      gpa: 10.3,
+      gpaScale: '12',
+      keywords: ['Machine Intelligence', 'Distributed Systems', 'Computer Vision', 'Multi-Agent Systems', 'Entrepreneurship', 'Mobile HCI'],
+      description: 'Master\'s thesis: "Using UAVs to Detect and Calculate Biomass Stockpile Volumes at Power Plants" — developing drone-based computer vision systems for automated biomass volume estimation at power plants.'
     },
     {
       startDate: new Date('2020-09-01'),
-      endDate: new Date('2023-06-30'),
-      title: 'BSc in Software Engineering',
-      gpa: 3.4,
+      endDate: new Date('2023-06-20'),
+      title: 'BSc in Engineering (Software)',
+      gpa: 9.1,
+      gpaScale: '12',
       location: 'Aalborg University',
-      keywords: ['Machine Intelligence', 'SCRUM', 'Project Management', 'Compilers', 'Semantics', 'Frontend Architecture', 'Backend Architecture'],
-      description: 'In my bachelors degree I gained fundamental knowledge in most parts of computer science. This all culminated in my bachelor thesis, "Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data". This was a collaboration with the company Saphe, to build a ML-model for them to predict the traffic on a given stretch of highway within the near future, based on previous traffic data, which in the end would let them alert users of their app of any congestion on their route before it would happen.'
+      keywords: ['Machine Intelligence', 'Compilers', 'Semantics', 'Security', 'Database Systems', 'Backend Architecture'],
+      description: 'Bachelor\'s thesis: "Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data" — collaboration with Saphe to build a ML model for predicting highway congestion based on historical traffic data.'
     }
   ],
   experience: [
@@ -62,8 +68,8 @@ const resume: Resume = {
       endDate: new Date('2024-08-31'),
       title: 'Student Worker / Full Stack Developer',
       location: 'TeamEffect Aps',
-      description: 'As a Full Stack developer at TeamEffect my main tasks were implementing new features in a Ruby on Rails application. This included adding entirely new pages, updating existing ones, and implementing custom APIs for select customers. I was also one of the main developers in migrating the platform from Rails 5 to Rails 7 and the entire frontend from Rails ERB pages to Svelte.',
-      keywords: ['Svelte', 'Ruby on Rails', 'PostgreSQL', 'Redis', 'Docker', 'CI/CD', 'Git']
+      description: 'Implemented new features in a Ruby on Rails application, including new pages, API integrations for select customers, and leading the migration from Rails 5 to Rails 7. Also migrated the entire frontend from Rails ERB pages to Svelte.',
+      keywords: ['Svelte', 'Ruby on Rails', 'PostgreSQL', 'Redis', 'Docker', 'CI/CD']
     }
   ]
 }
