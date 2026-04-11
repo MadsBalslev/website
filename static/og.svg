@@ -1,0 +1,9 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#101010"/>
+  <rect x="0" y="0" width="4" height="630" fill="#eb5e28"/>
+  <text x="80" y="260" font-family="monospace" font-size="64" font-weight="bold" fill="#f0ece2">Mads Balslev</text>
+  <text x="80" y="330" font-family="monospace" font-size="32" fill="#a8a29e">Software Engineer</text>
+  <text x="397" y="330" font-family="monospace" font-size="32" fill="#eb5e28"> / </text>
+  <text x="440" y="330" font-family="monospace" font-size="32" fill="#a8a29e">Consultant</text>
+  <text x="80" y="400" font-family="monospace" font-size="22" fill="#6b6560">madsbalslev.com</text>
+</svg>

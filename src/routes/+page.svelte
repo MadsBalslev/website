@@ -4,6 +4,11 @@
   import { IconBrandGithub, IconBrandLinkedin, IconArrowRight } from '@tabler/icons-svelte'
 </script>
 
+<svelte:head>
+  <meta property="og:title" content="Mads Balslev — Software Engineer" />
+  <meta property="og:description" content="Software Engineer and Consultant at Trifork. Building enterprise AI platforms and delivering customer solutions." />
+</svelte:head>
+
 <section class="hero" in:fly={{ y: 20, duration: 400 }}>
   <p class="greeting">Hi, I'm</p>
   <h1>Mads Balslev</h1>
