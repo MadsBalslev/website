@@ -7,12 +7,16 @@
 
 {#each projects as project}
   <Card {...project}>
-    <p>{project.description}</p>
-    <div class="actions" slot="footer">
-      {#if project.url}
-        <a href={project.url} target="_blank" class="project-link" type="button">View Project</a>
-      {/if}
-    </div>
+    {#snippet children()}
+      <p>{project.description}</p>
+    {/snippet}
+    {#snippet footer()}
+      <div class="actions">
+        {#if project.url}
+          <a href={project.url} target="_blank" class="project-link" type="button">View Project</a>
+        {/if}
+      </div>
+    {/snippet}
   </Card>
 {/each}
 

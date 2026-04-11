@@ -1,23 +1,19 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
 	import { slide } from 'svelte/transition'
 	import routes from '$lib/NavRoutes'
-
 	import Navlink from './Navlink.svelte'
 	import Hamburger from './Hamburger.svelte'
 	import Logo from '$lib/assets/Logo.svelte'
 
-	export let currentRoute: string
+	let { currentRoute }: { currentRoute: string } = $props()
+	let opened = $state(false)
 
-	$: opened = false
-
-	const checkWindowSize = () => {
-		if (window.innerWidth > 768) {
-			opened = false
+	$effect(() => {
+		const checkWindowSize = () => {
+			if (window.innerWidth > 768) {
+				opened = false
+			}
 		}
-	}
-
-	onMount(() => {
 		window.addEventListener('resize', checkWindowSize)
 		return () => window.removeEventListener('resize', checkWindowSize)
 	})

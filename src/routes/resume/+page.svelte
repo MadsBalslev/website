@@ -36,16 +36,18 @@
   <h1>Education</h1>
   {#each resume.education as education}
     <Card {...education} subtitle={education.location}>
-      {#if education.description}
-         <p>{education.description}</p>
-      {/if}
-      <div slot="footer">
+      {#snippet children()}
+        {#if education.description}
+           <p>{education.description}</p>
+        {/if}
+      {/snippet}
+      {#snippet footer()}
         {#if education.gpa}
           <div class="gpa">
             <span class="gpa-score">{education.gpa} / 4.0</span>
           </div>
         {/if}
-      </div>
+      {/snippet}
     </Card>
   {/each}
 </div>
@@ -54,9 +56,11 @@
   <h2>Work Experience</h2>
   {#each resume.experience as experience}
     <Card {...experience} subtitle={experience.location}>
-      {#if experience.description}
-        <p>{experience.description}</p>
-      {/if}
+      {#snippet children()}
+        {#if experience.description}
+          <p>{experience.description}</p>
+        {/if}
+      {/snippet}
     </Card>
   {/each}
 </div>

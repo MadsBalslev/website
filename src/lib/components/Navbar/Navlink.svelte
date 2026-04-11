@@ -1,15 +1,25 @@
-<script>
-	export let to = '/'
-	export let active = false
-	export let opened = false
+<script lang="ts">
+	import type { Snippet } from 'svelte'
+
+	let {
+		to = '/',
+		active = false,
+		opened = $bindable(false),
+		children
+	}: {
+		to?: string
+		active?: boolean
+		opened?: boolean
+		children?: Snippet
+	} = $props()
 
 	const handleClick = () => {
 		opened = false
 	}
 </script>
 
-<a href={to} on:click={handleClick} class={active ? 'active' : ''}>
-	<slot />
+<a href={to} onclick={handleClick} class={active ? 'active' : ''}>
+	{@render children?.()}
 </a>
 
 <style>

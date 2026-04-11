@@ -1,11 +1,27 @@
 <script lang="ts">
-  import Time from 'svelte-time'
+  import type { Snippet } from 'svelte'
 
-  export let title: string
-  export let subtitle: string | undefined = undefined
-  export let keywords: string[] = []
-  export let startDate: Date | undefined = undefined
-  export let endDate: Date | undefined = undefined
+  let {
+    title,
+    subtitle = undefined,
+    keywords = [],
+    startDate = undefined,
+    endDate = undefined,
+    children,
+    footer
+  }: {
+    title: string
+    subtitle?: string
+    keywords?: string[]
+    startDate?: Date
+    endDate?: Date
+    children?: Snippet
+    footer?: Snippet
+  } = $props()
+
+  function formatDate(date: Date): string {
+    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+  }
 </script>
 
 <div class="card">
@@ -19,11 +35,11 @@
         {#if startDate || endDate}
           <div class="time">
             {#if startDate}
-              <small><Time timestamp={startDate} format="MMM YYYY" /></small>
+              <small>{formatDate(startDate)}</small>
             {/if}
             -
             {#if endDate}
-              <small><Time timestamp={endDate} format="MMM YYYY" /></small>
+              <small>{formatDate(endDate)}</small>
             {:else}
               <small>Current</small>
             {/if}
@@ -32,7 +48,7 @@
       </div>
     {/if}
   </div>
-  <slot />
+  {@render children?.()}
   {#if keywords.length > 0}
     <div class="keywords">
       {#each keywords as keyword}
@@ -40,7 +56,7 @@
       {/each}
     </div>
   {/if}
-  <slot name="footer" />
+  {@render footer?.()}
 </div>
 
 <style>
