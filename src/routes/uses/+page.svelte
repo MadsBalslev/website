@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-  <title>Uses — Mads Balslev</title>
-  <meta property="og:title" content="Uses — Mads Balslev" />
+  <title>Uses -Mads Balslev</title>
+  <meta property="og:title" content="Uses -Mads Balslev" />
   <meta property="og:description" content="Tools, software, and hardware I use daily." />
 </svelte:head>
 

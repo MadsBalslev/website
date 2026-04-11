@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog — Mads Balslev</title>
+  <title>Blog -Mads Balslev</title>
 </svelte:head>
 
 <h1>Blog</h1>

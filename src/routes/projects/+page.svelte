@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>Projects — Mads Balslev</title>
+  <title>Projects -Mads Balslev</title>
 </svelte:head>
 
 <h1>Projects</h1>

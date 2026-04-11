@@ -26,12 +26,12 @@ const resume: Resume = {
     {
       startDate: new Date('2023-09-01'),
       endDate: new Date('2025-06-19'),
-      title: 'MSc in Engineering (Software) — Cand.Polyt.',
+      title: 'MSc in Engineering (Software), Cand.Polyt.',
       location: 'Aalborg University',
       gpa: 10.3,
       gpaScale: '12',
       keywords: ['Machine Intelligence', 'Distributed Systems', 'Computer Vision', 'Multi-Agent Systems', 'Entrepreneurship', 'Mobile HCI'],
-      description: 'Thesis: "Using UAVs to Detect and Calculate Biomass Stockpile Volumes at Power Plants" — a semi-autonomous system using drones and YOLOv11 for biomass inventory management, developed in collaboration with Danish power plants.'
+      description: 'Thesis: "Using UAVs to Detect and Calculate Biomass Stockpile Volumes at Power Plants". A semi-autonomous system using drones and YOLOv11 for biomass inventory management, developed in collaboration with Danish power plants.'
     },
     {
       startDate: new Date('2020-09-01'),
@@ -41,7 +41,7 @@ const resume: Resume = {
       gpaScale: '12',
       location: 'Aalborg University',
       keywords: ['Machine Intelligence', 'Compilers', 'Semantics', 'Security', 'Database Systems', 'Backend Architecture'],
-      description: 'Bachelor\'s thesis: "Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data" — collaboration with Saphe to build a ML model for predicting highway congestion based on historical traffic data.'
+      description: 'Bachelor\'s thesis: "Using Time-Series Forecasting To Predict Mean Speed Based on Traffic Data". Collaboration with Saphe to build a ML model for predicting highway congestion based on historical traffic data.'
     }
   ],
   experience: [

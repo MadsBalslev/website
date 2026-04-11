@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>Resume — Mads Balslev</title>
+  <title>Resume -Mads Balslev</title>
 </svelte:head>
 
 <div class="header">

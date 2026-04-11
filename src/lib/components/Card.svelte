@@ -40,7 +40,7 @@
             {#if startDate}
               <small>{formatDate(startDate)}</small>
             {/if}
-            —
+            -
             {#if endDate}
               <small>{formatDate(endDate)}</small>
             {:else}
@@ -60,7 +60,7 @@
           <div class="position-content">
             <span class="position-title">{position.title}</span>
             <span class="position-time">
-              {formatDate(position.startDate)} — {position.endDate ? formatDate(position.endDate) : 'Present'}
+              {formatDate(position.startDate)} - {position.endDate ? formatDate(position.endDate) : 'Present'}
             </span>
           </div>
         </div>
