@@ -40,11 +40,11 @@
             {#if startDate}
               <small>{formatDate(startDate)}</small>
             {/if}
-            -
+            —
             {#if endDate}
               <small>{formatDate(endDate)}</small>
             {:else}
-              <small>Current</small>
+              <small>Present</small>
             {/if}
           </div>
         {/if}
@@ -56,11 +56,11 @@
     <div class="positions">
       {#each positions as position}
         <div class="position">
-          <div class="position-marker"></div>
+          <div class="position-dot"></div>
           <div class="position-content">
             <span class="position-title">{position.title}</span>
             <span class="position-time">
-              {formatDate(position.startDate)} - {position.endDate ? formatDate(position.endDate) : 'Current'}
+              {formatDate(position.startDate)} — {position.endDate ? formatDate(position.endDate) : 'Present'}
             </span>
           </div>
         </div>
@@ -69,6 +69,7 @@
   {/if}
 
   {@render children?.()}
+
   {#if keywords.length > 0}
     <div class="keywords">
       {#each keywords as keyword}
@@ -76,24 +77,31 @@
       {/each}
     </div>
   {/if}
+
   {@render footer?.()}
 </div>
 
 <style>
   .card {
-    padding: 2rem 2.5rem;
-    margin: 1.5rem 0;
-    border-radius: .7rem;
-    background-color: #383633;
-
+    padding: var(--space-lg) var(--space-xl);
+    margin: var(--space-md) 0;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
+    transition: border-color var(--transition-normal), transform var(--transition-normal);
+  }
+
+  .card:hover {
+    border-color: var(--color-text-muted);
+    transform: translateY(-1px);
   }
 
   .header {
     display: flex;
-    gap: 1rem;
-    align-items:first baseline;
+    gap: var(--space-md);
+    align-items: first baseline;
     justify-content: space-between;
     word-break: normal;
     flex-wrap: wrap;
@@ -102,99 +110,108 @@
   .header .lead {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: var(--space-sm);
     flex: 4;
   }
 
   .header .lead h2 {
     margin: 0;
-    color: #fffcf2;
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
   }
 
   .header span {
     padding: 0;
-    border-radius: .3rem;
-    color: #ccc5b9;
+    color: var(--color-text-secondary);
   }
 
   .header .subtitle {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: var(--space-xs);
     align-items: flex-end;
-    color: #ccc5b9;
+    color: var(--color-text-secondary);
     flex: 1;
     min-width: fit-content;
+    font-size: var(--font-size-sm);
   }
 
   .header .subtitle .time {
-    padding: 0 8px;
+    padding: 0;
   }
 
   .positions {
-    margin-top: 1rem;
-    padding-left: 0.5rem;
-    border-left: 2px solid #eb5e28;
+    margin-top: var(--space-lg);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-accent);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--space-md);
   }
 
   .position {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: var(--space-md);
   }
 
-  .position-marker {
+  .position-dot {
     width: 8px;
     height: 8px;
     min-width: 8px;
     border-radius: 50%;
-    background-color: #eb5e28;
-    margin-top: 0.5rem;
-    margin-left: -0.8rem;
+    background-color: var(--color-accent);
+    margin-top: 0.45rem;
+    margin-left: calc(-1 * var(--space-md) - 5px);
   }
 
   .position-content {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.1rem;
   }
 
   .position-title {
-    color: #fffcf2;
+    color: var(--color-text);
     font-weight: 600;
+    font-size: var(--font-size-base);
   }
 
   .position-time {
-    color: #ccc5b9;
-    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
   }
 
   .keywords {
-    margin: 1rem 0;
+    margin-top: var(--space-lg);
     display: flex;
     flex-wrap: wrap;
-    gap: .8rem;
-    color: #ccc5b9;
+    gap: var(--space-sm);
   }
 
   .keywords span {
-    padding: 0 .5rem;
-    border: 1px solid #ccc5b9;
-    border-radius: .3rem;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    transition: border-color var(--transition-fast);
+  }
+
+  .keywords span:hover {
+    border-color: var(--color-accent);
   }
 
   @media (max-width: 768px) {
     .header {
       flex-direction: column;
-      gap: 1rem;
+      gap: var(--space-sm);
     }
 
     .header .subtitle {
       align-items: flex-start;
       flex-direction: row;
+      gap: var(--space-sm);
     }
   }
 </style>

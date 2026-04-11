@@ -19,85 +19,97 @@
 	})
 </script>
 
-<div class="navbar {opened ? 'open' : ''}">
-	<div class="innerContainer">
-		<div class="logo">
+<nav class="navbar" class:open={opened}>
+	<div class="inner">
+		<a href="/" class="logo">
 			<Logo />
-		</div>
+		</a>
 		<div class="actions">
-			<div class="buttons full">
+			<div class="links desktop">
 				{#each routes as { href, label }}
 					<Navlink to={href} active={currentRoute == href}>{label}</Navlink>
 				{/each}
 			</div>
-			<div class="hamburger responsive">
+			<div class="hamburger mobile">
 				<Hamburger bind:opened />
 			</div>
 		</div>
 	</div>
 	{#if opened}
-		<div class="buttons responsive open" transition:slide>
+		<div class="links mobile-menu" transition:slide>
 			{#each routes as { href, label }}
-					<Navlink bind:opened to={href} active={currentRoute == href}>{label}</Navlink>
+				<Navlink bind:opened to={href} active={currentRoute == href}>{label}</Navlink>
 			{/each}
 		</div>
 	{/if}
-</div>
-
+</nav>
 
 <style>
 	.navbar {
+		position: sticky;
+		top: 0;
+		z-index: 100;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		margin: 2rem 0;
+		padding: var(--space-md) 0;
+		background-color: color-mix(in srgb, var(--color-bg) 85%, transparent);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid transparent;
+		transition: border-color var(--transition-normal);
 	}
 
-	.navbar .innerContainer {
+	.navbar.open {
+		border-bottom-color: var(--color-border);
+	}
+
+	.inner {
 		width: 100%;
-		height: 60px;
+		height: 48px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	.buttons.full {
+	.links.desktop {
 		display: flex;
-		gap: 2rem;
+		gap: var(--space-xl);
 	}
 
-	.responsive {
+	.mobile {
 		display: none;
 	}
 
-	.buttons.responsive {
+	.mobile-menu {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 		width: 100%;
-		padding: 1rem;
+		padding: var(--space-md);
+		gap: var(--space-sm);
 	}
 
 	.hamburger {
 		display: none;
-		background: none;
-		border: none;
-		cursor: pointer;
-		color: #fffcf2;
 	}
 
 	.logo {
-		width: 50px;
-		height: 50px;
+		width: 40px;
+		height: 40px;
+		display: block;
+		transition: opacity var(--transition-fast);
+	}
+
+	.logo:hover {
+		opacity: 0.8;
 	}
 
 	@media (max-width: 768px) {
-		.buttons.full {
+		.links.desktop {
 			display: none;
 		}
 
-		.responsive {
+		.mobile {
 			display: flex;
 		}
 

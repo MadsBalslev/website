@@ -2,6 +2,7 @@
 	import '../app.css'
 	import '@fontsource-variable/source-code-pro'
 	import { page } from '$app/state'
+	import { fade } from 'svelte/transition'
 	import { Navbar } from '$lib/components'
 	import type { Snippet } from 'svelte'
 
@@ -10,18 +11,19 @@
 
 <Navbar currentRoute={page.url.pathname} />
 
-<main>
-	{@render children()}
-</main>
+{#key page.url.pathname}
+	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+		{@render children()}
+	</main>
+{/key}
 
 <footer>
-	<p>Created by <a href="/resume" class="me">Mads</a> in Aalborg, Denmark</p>
+	<p>Built by <a href="/resume">Mads Balslev</a></p>
 </footer>
 
 <style>
-	.me {
-		color: #eb5e28;
-		text-decoration: none;
-		font-weight: bold;
+	main {
+		flex: 1;
+		padding: var(--space-xl) 0;
 	}
 </style>

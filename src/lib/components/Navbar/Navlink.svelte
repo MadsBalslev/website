@@ -18,42 +18,54 @@
 	}
 </script>
 
-<a href={to} onclick={handleClick} class={active ? 'active' : ''}>
+<a href={to} onclick={handleClick} class:active>
 	{@render children?.()}
 </a>
 
 <style>
 	a {
-		color: #ccc5b9;
+		color: var(--color-text-secondary);
 		text-decoration: none;
+		font-size: var(--font-size-sm);
+		letter-spacing: 0.02em;
+		padding: var(--space-xs) 0;
+		position: relative;
+		transition: color var(--transition-fast);
+	}
+
+	a::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: var(--color-accent);
+		transition: width var(--transition-normal);
+	}
+
+	a:hover {
+		color: var(--color-text);
 	}
 
 	a:hover::after {
-		content: '';
-		display: block;
 		width: 100%;
-		height: 3px;
-		background-color: #eb5e28;
 	}
 
 	a.active {
-		color: #fffcf2;
+		color: var(--color-text);
 	}
 
 	a.active::after {
-		content: '';
-		display: block;
 		width: 100%;
-		height: 3px;
-		background-color: #eb5e28;
 	}
 
 	@media (max-width: 768px) {
 		a {
 			width: fit-content;
 			display: block;
-			font-size: large;
-			padding: .5rem;
+			font-size: var(--font-size-base);
+			padding: var(--space-sm);
 			text-align: center;
 		}
 	}

@@ -2,6 +2,10 @@
   let { data } = $props()
 </script>
 
+<svelte:head>
+  <title>Blog — Mads Balslev</title>
+</svelte:head>
+
 <h1>Blog</h1>
 
 {#if data.posts.length === 0}
@@ -23,10 +27,15 @@
 {/if}
 
 <style>
+  h1 {
+    font-size: var(--font-size-3xl);
+    margin: 0 0 var(--space-lg);
+  }
+
   .empty {
     text-align: center;
-    color: #ccc5b9;
-    margin-top: 2rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-2xl);
   }
 
   .posts {
@@ -34,34 +43,38 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--space-md);
   }
 
   .posts li a {
     display: block;
-    padding: 1.5rem 2rem;
-    background-color: #383633;
-    border-radius: 0.7rem;
+    padding: var(--space-lg) var(--space-xl);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: all var(--transition-normal);
   }
 
   .posts li a:hover {
+    border-color: var(--color-text-muted);
     transform: translateY(-2px);
   }
 
   .posts li h2 {
-    margin: 0 0 0.5rem;
-    color: #fffcf2;
+    margin: 0 0 var(--space-sm);
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
   }
 
   .posts li p {
-    margin: 0 0 0.5rem;
-    color: #ccc5b9;
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
   }
 
   .posts li time {
-    color: #ccc5b9;
-    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
   }
 </style>
