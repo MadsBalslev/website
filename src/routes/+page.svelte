@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import socials from '$lib/Socials'
-  import { IconBrandGithub, IconBrandLinkedin, IconArrowRight } from '@tabler/icons-svelte'
+  import { IconBrandGithub, IconBrandLinkedin, IconArrowRight, IconMail } from '@tabler/icons-svelte'
 </script>
 
 <svelte:head>
@@ -45,6 +45,21 @@
     <p>Experience, education, and skills</p>
     <span class="arrow"><IconArrowRight size={18} /></span>
   </a>
+</section>
+
+<section class="contact" in:fly={{ y: 20, duration: 400, delay: 300 }}>
+  <h2>Get in touch</h2>
+  <p>Have a project in mind or just want to say hi?</p>
+  <div class="contact-links">
+    <a href="mailto:madspbalslev@gmail.com" class="contact-link">
+      <IconMail size={20} />
+      <span>madspbalslev@gmail.com</span>
+    </a>
+    <a href="https://www.linkedin.com/in/madsbalslev/" target="_blank" rel="noopener" class="contact-link">
+      <IconBrandLinkedin size={20} />
+      <span>LinkedIn</span>
+    </a>
+  </div>
 </section>
 
 <style>
@@ -151,6 +166,46 @@
   .highlight-card:hover .arrow {
     color: var(--color-accent);
     transform: translateX(3px);
+  }
+
+  .contact {
+    padding: var(--space-2xl) 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .contact h2 {
+    font-size: var(--font-size-2xl);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .contact > p {
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-links {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    transition: all var(--transition-fast);
+  }
+
+  .contact-link:hover {
+    color: var(--color-text);
+    border-color: var(--color-accent);
+    background-color: var(--color-surface);
   }
 
   @media (max-width: 768px) {
