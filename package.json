@@ -32,6 +32,9 @@
 		"vite": "^6"
 	},
 	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
 	"dependencies": {
 		"@fontsource-variable/source-code-pro": "^5.0.17",
 		"@tabler/icons-svelte": "^3"
