@@ -8,7 +8,7 @@
 <div class="header">
   <h1>Mads Balslev</h1>
   <p>
-    I am a full-stack developer with experience in Ruby on Rails and Svelte, currently working part-time in the software industry while pursuing a MSc in Software Engineering at Aalborg University. My main skills are front and back end development and system architecture.
+    Software Engineer and Consultant at Trifork, building enterprise AI platforms and delivering customer solutions. MSc in Software Engineering from Aalborg University. Experienced across the full stack with Next.js/React, Python/FastAPI, C#/.NET, and Ruby on Rails.
   </p>
   <div class="location">
     <IconMapPin />

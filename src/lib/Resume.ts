@@ -1,7 +1,14 @@
+type Position = {
+  title: string
+  startDate: Date
+  endDate?: Date
+}
+
 type ResumeItem = {
   startDate: Date
   endDate?: Date
   title: string
+  positions?: Position[]
   keywords?: string[]
   description?: string
   location?: string
@@ -17,6 +24,7 @@ const resume: Resume = {
   education: [
     {
       startDate: new Date('2023-09-01'),
+      endDate: new Date('2025-06-30'),
       title: 'MSc in Software Engineering',
       location: 'Aalborg University'
     },
@@ -32,14 +40,33 @@ const resume: Resume = {
   ],
   experience: [
     {
+      startDate: new Date('2024-09-01'),
+      title: 'Trifork',
+      location: 'Trifork',
+      positions: [
+        {
+          title: 'Software Engineer / Consultant',
+          startDate: new Date('2025-08-01'),
+        },
+        {
+          title: 'Student Worker',
+          startDate: new Date('2024-09-01'),
+          endDate: new Date('2025-07-31'),
+        }
+      ],
+      description: 'Working primarily on Corax AI, an enterprise platform for configuring, deploying, and monitoring AI capabilities. Also delivering customer projects across various domains. Building with Next.js/React and Python/FastAPI for Corax, and C#/.NET and Next.js/React for customer projects.',
+      keywords: ['Next.js', 'React', 'Python', 'FastAPI', 'C#', '.NET', 'TypeScript']
+    },
+    {
       startDate: new Date('2022-01-01'),
-      title: 'Full Stack Developer',
+      endDate: new Date('2024-08-31'),
+      title: 'Student Worker / Full Stack Developer',
       location: 'TeamEffect Aps',
-      description: 'As a Full Stack developer at TeamEffect my main tasks was to implement new features in our Ruby on Rails application. This includes adding entirely new pages as well as updating existing pages. I have also been tasked with implementing custom API\'s for select customers, to access the app through their own internal service. Further, I was also one of the main developers in the task of migrating our entire platform from Rails 5 to Rails 7 as well as migrating the entire frontend from Rails ERB pages to the more modern Svelte.',
-      keywords: ['Svelte', 'Ruby on Rails', 'Postgresql', 'Redis', 'Docker', 'CI/CD', 'Git']
+      description: 'As a Full Stack developer at TeamEffect my main tasks were implementing new features in a Ruby on Rails application. This included adding entirely new pages, updating existing ones, and implementing custom APIs for select customers. I was also one of the main developers in migrating the platform from Rails 5 to Rails 7 and the entire frontend from Rails ERB pages to Svelte.',
+      keywords: ['Svelte', 'Ruby on Rails', 'PostgreSQL', 'Redis', 'Docker', 'CI/CD', 'Git']
     }
   ]
 }
 
-export type { Resume, ResumeItem}
+export type { Resume, ResumeItem, Position }
 export default resume

@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
+  import type { Position } from '$lib/Resume'
 
   let {
     title,
@@ -7,6 +8,7 @@
     keywords = [],
     startDate = undefined,
     endDate = undefined,
+    positions = undefined,
     children,
     footer
   }: {
@@ -15,6 +17,7 @@
     keywords?: string[]
     startDate?: Date
     endDate?: Date
+    positions?: Position[]
     children?: Snippet
     footer?: Snippet
   } = $props()
@@ -48,6 +51,23 @@
       </div>
     {/if}
   </div>
+
+  {#if positions && positions.length > 0}
+    <div class="positions">
+      {#each positions as position}
+        <div class="position">
+          <div class="position-marker"></div>
+          <div class="position-content">
+            <span class="position-title">{position.title}</span>
+            <span class="position-time">
+              {formatDate(position.startDate)} - {position.endDate ? formatDate(position.endDate) : 'Current'}
+            </span>
+          </div>
+        </div>
+      {/each}
+    </div>
+  {/if}
+
   {@render children?.()}
   {#if keywords.length > 0}
     <div class="keywords">
@@ -109,6 +129,47 @@
 
   .header .subtitle .time {
     padding: 0 8px;
+  }
+
+  .positions {
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid #eb5e28;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .position {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .position-marker {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background-color: #eb5e28;
+    margin-top: 0.5rem;
+    margin-left: -0.8rem;
+  }
+
+  .position-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .position-title {
+    color: #fffcf2;
+    font-weight: 600;
+  }
+
+  .position-time {
+    color: #ccc5b9;
+    font-size: 0.85rem;
   }
 
   .keywords {
