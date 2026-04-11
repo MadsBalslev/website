@@ -3,12 +3,14 @@
 	import '@fontsource-variable/source-code-pro'
 	import { dev } from '$app/environment'
 	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit'
 	import { page } from '$app/state'
 	import { fade } from 'svelte/transition'
 	import { Navbar } from '$lib/components'
 	import type { Snippet } from 'svelte'
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' })
+	injectSpeedInsights()
 
 	let { children }: { children: Snippet } = $props()
 
