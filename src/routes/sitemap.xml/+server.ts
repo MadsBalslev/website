@@ -1,8 +1,15 @@
 const site = 'https://madsbalslev.com'
 
-const staticPages = ['', '/projects', '/resume', '/uses']
+const staticPages = [
+  { path: '', changefreq: 'monthly' },
+  { path: '/projects', changefreq: 'monthly' },
+  { path: '/resume', changefreq: 'monthly' },
+  { path: '/uses', changefreq: 'monthly' }
+]
 
 export async function GET() {
+  const today = new Date().toISOString().split('T')[0]
+
   const postFiles = import.meta.glob('/src/content/blog/*.md', { eager: true })
 
   const blogPosts = Object.entries(postFiles)
@@ -17,7 +24,9 @@ export async function GET() {
     ...staticPages.map(
       (page) => `
     <url>
-      <loc>${site}${page}</loc>
+      <loc>${site}${page.path}</loc>
+      <lastmod>${today}</lastmod>
+      <changefreq>${page.changefreq}</changefreq>
     </url>`
     ),
     ...blogPosts.map(
@@ -25,6 +34,7 @@ export async function GET() {
     <url>
       <loc>${site}/blog/${post.slug}</loc>
       <lastmod>${new Date(post.date).toISOString().split('T')[0]}</lastmod>
+      <changefreq>yearly</changefreq>
     </url>`
     )
   ]

@@ -12,9 +12,11 @@
 </script>
 
 <svelte:head>
-  <title>Mads Balslev -Software Engineer</title>
-  <meta property="og:title" content="Mads Balslev -Software Engineer" />
-  <meta property="og:description" content="Software Engineer and Consultant at Trifork. Building enterprise AI platforms and delivering customer solutions." />
+  <title>Mads Balslev - Software Engineer & Consultant</title>
+  <meta name="description" content="Mads Balslev is a Software Engineer and Consultant at Trifork, building enterprise AI platforms. MSc in Software Engineering from Aalborg University." />
+  <meta property="og:title" content="Mads Balslev - Software Engineer & Consultant" />
+  <meta property="og:description" content="Mads Balslev is a Software Engineer and Consultant at Trifork, building enterprise AI platforms. MSc in Software Engineering from Aalborg University." />
+  <link rel="canonical" href="https://madsbalslev.com" />
 </svelte:head>
 
 <section class="hero" in:fly={{ y: 20, duration: 400 }}>

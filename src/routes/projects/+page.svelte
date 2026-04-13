@@ -4,7 +4,11 @@
 </script>
 
 <svelte:head>
-  <title>Projects - Mads Balslev</title>
+  <title>Projects - Mads Balslev | Software Engineer</title>
+  <meta name="description" content="Projects by Mads Balslev. From drone-based computer vision to multi-agent AI systems and real-time WebRTC applications." />
+  <meta property="og:title" content="Projects - Mads Balslev | Software Engineer" />
+  <meta property="og:description" content="Projects by Mads Balslev. From drone-based computer vision to multi-agent AI systems and real-time WebRTC applications." />
+  <link rel="canonical" href="https://madsbalslev.com/projects" />
 </svelte:head>
 
 <h1>Projects</h1>

@@ -15,7 +15,40 @@
 	let { children }: { children: Snippet } = $props()
 
 	const buildDate = __BUILD_DATE__
+
+	const personSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Mads Balslev',
+		url: 'https://madsbalslev.com',
+		jobTitle: 'Software Engineer & Consultant',
+		description: 'Software Engineer focusing on generative AI, building enterprise AI platforms at Trifork. MSc in Software Engineering from Aalborg University.',
+		worksFor: {
+			'@type': 'Organization',
+			name: 'Trifork',
+			url: 'https://trifork.com'
+		},
+		alumniOf: {
+			'@type': 'CollegeOrUniversity',
+			name: 'Aalborg University',
+			url: 'https://www.aau.dk'
+		},
+		knowsAbout: ['Generative AI', 'Software Engineering', 'Next.js', 'React', 'Python', 'FastAPI', 'Computer Vision', 'Multi-Agent Systems'],
+		sameAs: [
+			'https://www.linkedin.com/in/madsbalslev/',
+			'https://www.github.com/madsbalslev/'
+		],
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Aalborg',
+			addressCountry: 'DK'
+		}
+	}
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(personSchema)}</script>`}
+</svelte:head>
 
 <Navbar currentRoute={page.url.pathname} />
 

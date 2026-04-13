@@ -3,9 +3,11 @@
 </script>
 
 <svelte:head>
-  <title>Uses -Mads Balslev</title>
-  <meta property="og:title" content="Uses -Mads Balslev" />
-  <meta property="og:description" content="Tools, software, and hardware I use daily." />
+  <title>Uses - Mads Balslev | Software Engineer</title>
+  <meta name="description" content="Tools, software, and hardware Mads Balslev uses daily for software engineering and AI development." />
+  <meta property="og:title" content="Uses - Mads Balslev | Software Engineer" />
+  <meta property="og:description" content="Tools, software, and hardware Mads Balslev uses daily for software engineering and AI development." />
+  <link rel="canonical" href="https://madsbalslev.com/uses" />
 </svelte:head>
 
 <h1>Uses</h1>

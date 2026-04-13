@@ -6,7 +6,11 @@
 </script>
 
 <svelte:head>
-  <title>Resume - Mads Balslev</title>
+  <title>Resume - Mads Balslev | Software Engineer</title>
+  <meta name="description" content="Resume of Mads Balslev, Software Engineer and Consultant at Trifork. Experience in Next.js, React, Python, FastAPI, and C#/.NET. MSc from Aalborg University." />
+  <meta property="og:title" content="Resume - Mads Balslev | Software Engineer" />
+  <meta property="og:description" content="Resume of Mads Balslev, Software Engineer and Consultant at Trifork. Experience in Next.js, React, Python, FastAPI, and C#/.NET. MSc from Aalborg University." />
+  <link rel="canonical" href="https://madsbalslev.com/resume" />
 </svelte:head>
 
 <div class="header">
