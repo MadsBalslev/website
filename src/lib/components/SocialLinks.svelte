@@ -1,17 +1,23 @@
 <script lang="ts">
-  import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-svelte'
+  import type { Social } from '$lib/Socials'
 
-  let { socials, size = 20 }: { socials: { title: string; url: string; logo: string }[]; size?: number } = $props()
+  let {
+    socials,
+    size = 20,
+    variant = 'icon'
+  }: {
+    socials: Social[]
+    size?: number
+    variant?: 'icon' | 'inline'
+  } = $props()
 </script>
 
-<div class="socials">
+<div class="socials" class:inline={variant === 'inline'}>
   {#each socials as social}
     <a href={social.url} target="_blank" rel="noopener" class="social-link" aria-label={social.title}>
-      {#if social.logo === 'github'}
-        <IconBrandGithub {size} />
-      {/if}
-      {#if social.logo === 'linkedin'}
-        <IconBrandLinkedin {size} />
+      <social.icon {size} />
+      {#if variant === 'inline'}
+        <span>{social.title}</span>
       {/if}
     </a>
   {/each}
@@ -21,6 +27,11 @@
   .socials {
     display: flex;
     gap: var(--space-sm);
+  }
+
+  .socials.inline {
+    gap: var(--space-md);
+    flex-wrap: wrap;
   }
 
   .social-link {
@@ -39,5 +50,13 @@
     color: var(--color-text);
     border-color: var(--color-accent);
     background-color: var(--color-surface);
+  }
+
+  .inline .social-link {
+    width: auto;
+    height: auto;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
   }
 </style>
