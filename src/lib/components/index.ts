@@ -1,2 +1,7 @@
 export { default as Navbar } from './Navbar/Navbar.svelte'
 export { default as Card } from './Card.svelte'
+export { default as ExperienceCard } from './ExperienceCard.svelte'
+export { default as EducationCard } from './EducationCard.svelte'
+export { default as ProjectCard } from './ProjectCard.svelte'
+export { default as SocialLinks } from './SocialLinks.svelte'
+export { default as SectionHeader } from './SectionHeader.svelte'

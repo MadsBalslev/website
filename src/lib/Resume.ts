@@ -66,8 +66,15 @@ const resume: Resume = {
     {
       startDate: new Date('2022-01-01'),
       endDate: new Date('2024-08-31'),
-      title: 'Student Worker / Full Stack Developer',
+      title: 'TeamEffect Aps',
       location: 'TeamEffect Aps',
+      positions: [
+        {
+          title: 'Student Worker / Full Stack Developer',
+          startDate: new Date('2022-01-01'),
+          endDate: new Date('2024-08-31'),
+        }
+      ],
       description: 'Implemented new features in a Ruby on Rails application, including new pages, API integrations for select customers, and leading the migration from Rails 5 to Rails 7. Also migrated the entire frontend from Rails ERB pages to Svelte.',
       keywords: ['Svelte', 'Ruby on Rails', 'PostgreSQL', 'Redis', 'Docker', 'CI/CD']
     }

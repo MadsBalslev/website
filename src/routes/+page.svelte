@@ -1,7 +1,8 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import socials from '$lib/Socials'
-  import { IconBrandGithub, IconBrandLinkedin, IconArrowRight, IconMail } from '@tabler/icons-svelte'
+  import { SocialLinks } from '$lib/components'
+  import { IconArrowRight, IconMail, IconBrandLinkedin } from '@tabler/icons-svelte'
 </script>
 
 <svelte:head>
@@ -21,18 +22,7 @@
     Next.js, React, and Python.
   </p>
 
-  <div class="socials">
-    {#each socials as social}
-      <a href={social.url} target="_blank" rel="noopener" class="social-link" aria-label={social.title}>
-        {#if social.logo === 'github'}
-          <IconBrandGithub size={22} />
-        {/if}
-        {#if social.logo === 'linkedin'}
-          <IconBrandLinkedin size={22} />
-        {/if}
-      </a>
-    {/each}
-  </div>
+  <SocialLinks {socials} size={22} />
 </section>
 
 <section class="highlights" in:fly={{ y: 20, duration: 400, delay: 150 }}>
@@ -97,29 +87,6 @@
     color: var(--color-text-secondary);
     max-width: 560px;
     margin: 0 0 var(--space-xl);
-  }
-
-  .socials {
-    display: flex;
-    gap: var(--space-sm);
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    color: var(--color-text-secondary);
-    transition: all var(--transition-fast);
-  }
-
-  .social-link:hover {
-    color: var(--color-text);
-    border-color: var(--color-accent);
-    background-color: var(--color-surface);
   }
 
   .highlights {
