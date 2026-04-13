@@ -1,10 +1,11 @@
-import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-svelte'
+import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-svelte-runes'
+
+import type { Component } from 'svelte'
 
 type Social = {
   title: string
   url: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  icon: any
+  icon: Component<{ size?: number }>
 }
 
 const socials: Social[] = [

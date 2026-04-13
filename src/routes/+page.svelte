@@ -3,7 +3,7 @@
   import socials from '$lib/Socials'
   import type { Social } from '$lib/Socials'
   import { SocialLinks } from '$lib/components'
-  import { IconArrowRight, IconMail, IconBrandLinkedin } from '@tabler/icons-svelte'
+  import { IconArrowRight, IconMail, IconBrandLinkedin } from '@tabler/icons-svelte-runes'
 
   const contactLinks: Social[] = [
     { title: 'madspbalslev@gmail.com', url: 'mailto:madspbalslev@gmail.com', icon: IconMail },

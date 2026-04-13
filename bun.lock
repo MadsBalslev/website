@@ -6,7 +6,7 @@
       "name": "website",
       "dependencies": {
         "@fontsource-variable/source-code-pro": "^5.0.17",
-        "@tabler/icons-svelte": "^3",
+        "@tabler/icons-svelte-runes": "^3.41.1",
         "@vercel/analytics": "^2.0.1",
         "@vercel/speed-insights": "^2.0.0",
       },
@@ -191,7 +191,7 @@
 
     "@tabler/icons": ["@tabler/icons@3.41.1", "", {}, "sha512-OaRnVbRmH2nHtFeg+RmMJ/7m2oBIF9XCJAUD5gQnMrpK9f05ydj8MZrAf3NZQqOXyxGN1UBL0D5IKLLEUfr74Q=="],
 
-    "@tabler/icons-svelte": ["@tabler/icons-svelte@3.41.1", "", { "dependencies": { "@tabler/icons": "3.41.1" }, "peerDependencies": { "svelte": ">=3 <6 || >=5.0.0-next.0" } }, "sha512-VVWMTFxp7Hm2s1ev7i7mnQiP/v38YmFWXrNT1E1Z601sDeaotDN0HoVUAALKTwLMcoUQbtR07Mn2nHKKkQDR7Q=="],
+    "@tabler/icons-svelte-runes": ["@tabler/icons-svelte-runes@3.41.1", "", { "dependencies": { "@tabler/icons": "3.41.1" }, "peerDependencies": { "svelte": "^5.0.0" } }, "sha512-74xAMLZiTszNcbtC+ujpz50dWxgfQsVLi5gxAggJsriY6irdqiHABs1gvuzg6G0wbd4tmqUHJNxbqCpuWgiS3Q=="],
 
     "@types/cookie": ["@types/cookie@0.6.0", "", {}, "sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA=="],
 

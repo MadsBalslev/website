@@ -2,7 +2,7 @@
   import resume from "$lib/Resume";
   import socials from "$lib/Socials";
   import { ExperienceCard, EducationCard, SocialLinks, SectionHeader } from "$lib/components/"
-  import { IconMapPin, IconMail } from "@tabler/icons-svelte";
+  import { IconMapPin, IconMail } from "@tabler/icons-svelte-runes";
 </script>
 
 <svelte:head>

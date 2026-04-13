@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@fontsource-variable/source-code-pro": "^5.0.17",
-		"@tabler/icons-svelte": "^3",
+		"@tabler/icons-svelte-runes": "^3.41.1",
 		"@vercel/analytics": "^2.0.1",
 		"@vercel/speed-insights": "^2.0.0"
 	}
